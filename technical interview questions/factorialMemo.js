@@ -13,18 +13,35 @@ const factorial = memoize((x) => {
   return x * factorial(x - 1);
 });
 
-console.time('factorial 5');
-console.log(factorial(5)); // 120
-console.timeEnd('factorial 5');
+const slowFactorial = (x) => {
+  if (x === 0) return 1;
+  return x * slowFactorial(x - 1);
+}
 
-console.time('factorial 6');
-console.log(factorial(6)); // 720
-console.timeEnd('factorial 6');
+// factorial memo
 
-console.time('factorial 7');
-console.log(factorial(7)); // 5040
-console.timeEnd('factorial 7');
+console.time('factorial 20');
+console.log(factorial(20)); 
+console.timeEnd('factorial 20');
 
-console.time('factorial 8');
-console.log(factorial(8)); // 40320
-console.timeEnd('factorial 8');
+console.time('factorial 21');
+console.log(factorial(21)); 
+console.timeEnd('factorial 21');
+
+console.time('factorial 22');
+console.log(factorial(22)); 
+console.timeEnd('factorial 22');
+
+// slowFactorial
+
+console.time('slowFactorial 20');
+console.log(slowFactorial(20));
+console.timeEnd('slowFactorial 20');
+
+console.time('slowFactorial 21');
+console.log(slowFactorial(21));
+console.timeEnd('slowFactorial 21');
+
+console.time('slowFactorial 22');
+console.log(slowFactorial(22)); 
+console.timeEnd('slowFactorial 22');
