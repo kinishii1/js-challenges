@@ -1,4 +1,4 @@
-// FILO
+// LIFO - Last In First Out
 
 export class Stack {
   constructor() {
