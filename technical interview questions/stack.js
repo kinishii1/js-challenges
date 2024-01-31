@@ -20,4 +20,16 @@ export class Stack {
   isEmpty() {
     return this.stack.length === 0;
   }
+
+  getMin() {
+    return Math.min(...this.stack);
+  }
+
+  getMax() {
+    return Math.max(...this.stack);
+  }
+
+  sort() {
+    return this.stack.sort((a, b) => a - b);
+  }
 }

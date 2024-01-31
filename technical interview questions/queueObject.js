@@ -24,4 +24,12 @@ class Queue {
   peek() {
     return this.storage[this.head];
   }
+
+  getMin() {
+    return Math.min(...Object.values(this.storage));
+  }
+
+  getMax() {
+    return Math.max(...Object.values(this.storage));
+  }
 }
